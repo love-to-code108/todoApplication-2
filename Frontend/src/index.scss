@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+// IMPORTING FONTS HERE
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-league {
+    font-family: "League Spartan", sans-serif;
+    ;
+}
+
+
+
+
+// ******************************************************************************
+// LANDING PAGE 
+.LandingPageMainWrapper {
+    padding: 4rem 5rem;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.LandingPage-DoitBigLogo {
+    height: 34rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.LandingPage-DoitBigLogo>div {
+    position: relative;
+    right: 5rem;
+
+}
+
+.LandingPage-signUp-signIn-button {
+    height: 12rem;
+
+}
+
+.LandingPage-signUp-signIn-button>div {
+    position: relative;
+    left: 18.4rem;
+}
+
+.signUp-button {
+    padding: 0.6rem 2rem;
+    background-color: black;
+    color: white;
+    margin-right: 2rem;
+
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 4px 4px #F56B00;
+
+
+
+}
+
+
+
+.signIn-button {
+    padding: 0.6rem 2rem;
+    background-color: white;
+    color: black;
+
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 4px 4px black;
+}
