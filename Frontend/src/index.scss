@@ -87,3 +87,37 @@
 
     box-shadow: 4px 4px black;
 }
+
+
+
+
+// SIGN UP PAGE
+
+.SignUpPage-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 4rem 5rem;
+
+
+}
+
+.SignUpPage-main > div {
+    
+    width: 65rem;
+    height: 37rem;
+
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+
+    border-radius: 5px;
+
+    padding: 3rem 4rem;
+
+}
+
