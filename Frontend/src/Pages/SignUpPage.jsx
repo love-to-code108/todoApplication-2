@@ -10,7 +10,7 @@ export const SignUpPage = () => {
 
                 {/* signup block heading */}
                 <div>
-                    <h1 className=" text-5xl font-poppins mb-16">Sign Up</h1>
+                    <h1 className=" text-5xl font-poppins mb-10">Sign Up</h1>
                 </div>
 
 
@@ -18,7 +18,7 @@ export const SignUpPage = () => {
                     {/* name */}
                     <div>
 
-                        <p>Name</p>
+                        <p className=" text-xl">Name</p>
                         <input type="text" />
                     </div>
                     {/* date of birth */}

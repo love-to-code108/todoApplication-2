@@ -107,6 +107,8 @@
 
 }
 
+
+// sign up block
 .SignUpPage-main > div {
     
     width: 65rem;
@@ -118,6 +120,20 @@
     border-radius: 5px;
 
     padding: 3rem 4rem;
+
+}
+
+// name element input
+.SignUpPage-main > div > div > div:nth-child(1) > input{
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+    border-radius: 4px;
+
+    padding: 2px 4px;
+}
+
+.SignUpPage-main > div > div > div:nth-child(1) > input:focus{
+    outline: none;
 
 }
 
