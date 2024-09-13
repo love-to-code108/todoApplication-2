@@ -1,4 +1,3 @@
-import React from 'react'
 import doItLogo from "../assets/Logo/doitLogo.svg"
 
 
