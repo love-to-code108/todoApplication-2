@@ -1,72 +1,33 @@
+import { Box, Center, Flex , Input } from "@chakra-ui/react"
 
 
 export const SignUpPage = () => {
 
     return (
-        <div className=" SignUpPage-main">
+        <Center w={[200 , 300 , 400 , 400 , 400 , "100%"]} h={400} className=" font-poppins">
+            {/* <Box> Hello world</Box>
+            <Box> Hello world</Box>
+            <Box> Hello world</Box>
+            <Box> Hello world</Box> */}
+            <Input 
+            placeholder="Enter Something"
+            type="text" 
+            border='2px solid black'
+            focusBorderColor="black"
+            w={400}
+            sx={{
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease', // Animates scaling and shadow
+                _hover: {
+                  transform: 'scale(1.05)', // Scales the input slightly
+                  boxShadow: '2px 2px 0 0 black', // Adds a shadow on focus
+                  outline: 'none', // Removes the default outline
+                },
+                // _hover:{
+                //     border: '2px solid black',
+                // },
+              }} 
+               />
 
-            {/* the sign up block */}
-            <div className=" flex flex-col justify-center items-center">
-
-
-                <div className="w-[100%]">
-                    {/* signup block heading */}
-                    <div>
-                        <h1 className=" text-5xl font-poppins mb-10">Sign Up</h1>
-                    </div>
-
-
-                    <div className=" font-poppins flex">
-
-                        <div className=" flex flex-col w-[50%]">
-                            {/* name */}
-                            <div className=" mb-6 ml-4">
-
-                                <p className=" text-xl">Name</p>
-                                <input className="SignUpPage-input" type="text" />
-                            </div>
-                            {/* date of birth */}
-                            <div className=" mb-6 ml-4">
-                                <p className=" text-xl">Date of birth</p>
-                                <input placeholder="" className=" SignUpPage-input w-[20.4rem]" type="date" />
-                            </div>
-
-                            {/* email */}
-                            <div className=" mb-6 ml-4">
-                                <p className=" text-xl">Email</p>
-                                <input className=" SignUpPage-input" type="email" />
-                            </div>
-                        </div>
-
-
-
-                        <div className=" flex flex-col w-[50%]">
-                            {/* Username */}
-                            <div className=" mb-6 flex flex-col  ml-4">
-
-                                <p className=" text-xl">Username</p>
-                                <input className="SignUpPage-input" type="text" />
-                            </div>
-                            {/* Password */}
-                            <div className=" mb-6 ml-4">
-                                <p className=" text-xl">Password</p>
-                                <input placeholder="Password" className=" SignUpPage-input w-[20.4rem]" type="password" />
-                            </div>
-
-                            {/* Confirm Password */}
-                            <div className=" mb-6 ml-4">
-                                <p className=" text-xl">Confirm Password</p>
-                                <input placeholder="Confirm Password" className=" SignUpPage-input" type="password" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            {/* the doit logo */}
-
-        </div>
+        </Center>
     )
 }
