@@ -21,6 +21,7 @@
 
 
 
+
 // ******************************************************************************
 // LANDING PAGE 
 .LandingPageMainWrapper {
@@ -119,20 +120,22 @@
 
     border-radius: 5px;
 
-    padding: 3rem 4rem;
+    padding: 4.5rem 6rem;
 
+    
 }
 
 // name element input
-.SignUpPage-main > div > div > div:nth-child(1) > input{
+.SignUpPage-input{
     border: 1px solid black;
     box-shadow: 2px 2px black;
     border-radius: 4px;
-
+    
     padding: 2px 4px;
+    width: 20.4rem;
 }
 
-.SignUpPage-main > div > div > div:nth-child(1) > input:focus{
+.SignUpPage-input:focus{
     outline: none;
 
 }
