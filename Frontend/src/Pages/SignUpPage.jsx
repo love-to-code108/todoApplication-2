@@ -19,7 +19,7 @@ export const SignUpPage = () => {
 
         {/* SIGN UP HEADING */}
         <Flex mb="10" w="91%">
-          <Heading fontWeight="light" size="3xl">Sign Up</Heading>
+          <Heading fontWeight="normal" size="3xl">Sign Up</Heading>
         </Flex>
 
 
