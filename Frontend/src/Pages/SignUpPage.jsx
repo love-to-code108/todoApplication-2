@@ -1,6 +1,8 @@
 import { Box, Button, Center, Flex, Heading, Input, Text } from "@chakra-ui/react"
 import '@fontsource/poppins';
 import { InputBox } from "../Components/InputBox"
+import doit from "../assets/Logo/doitLogo.svg"
+
 
 
 export const SignUpPage = () => {
@@ -36,13 +38,13 @@ export const SignUpPage = () => {
           <Flex direction="column">
 
             {/* NAME */}
-            <InputBox  name="Name" type="text" />
+            <InputBox name="Name" type="text" />
 
             {/* DATE OF BIRTH */}
-            <InputBox  name="Date of Birth" type="Date" />
+            <InputBox name="Date of Birth" type="Date" />
 
             {/* EMAIL */}
-            <InputBox  name="Email" type="email" />
+            <InputBox name="Email" type="email" />
 
           </Flex>
 
@@ -52,11 +54,11 @@ export const SignUpPage = () => {
           {/* right input boxes */}
           <Flex direction="column">
             {/* USERNAME */}
-            <InputBox  name="Username" type="text" />
+            <InputBox name="Username" type="text" />
             {/* PASSWORD */}
-            <InputBox  name="Password" type="password" />
+            <InputBox name="Password" type="password" />
             {/* CONFIRM PASSWORD */}
-            <InputBox  name="Confirm Password" type="password" />
+            <InputBox name="Confirm Password" type="password" />
           </Flex>
 
 
@@ -80,17 +82,17 @@ export const SignUpPage = () => {
           {/* Sign Up Button */}
           <Flex mr={7}>
             <Button color="white"
-            background="black"
-            borderRadius="0px"
-            px="6"
-            fontSize="lg"
-            sx={{
-              _hover:{
-                backgroundColor:"black",
-                color:"white",
-                transform:"scale(1.04)"
-              }
-            }}
+              background="black"
+              borderRadius="0px"
+              px="6"
+              fontSize="lg"
+              sx={{
+                _hover: {
+                  backgroundColor: "black",
+                  color: "white",
+                  transform: "scale(1.04)"
+                }
+              }}
             >Sign Up</Button>
           </Flex>
         </Flex>
@@ -100,6 +102,11 @@ export const SignUpPage = () => {
 
 
       </Flex> {/* This is the master flex*/}
+
+      {/* the doit logo*/}
+      <div className=' absolute right-10 bottom-8'>
+        <img src={doit} alt="" />
+      </div>
     </Center>
   )
 }

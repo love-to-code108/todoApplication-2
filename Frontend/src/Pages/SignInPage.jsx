@@ -1,6 +1,7 @@
 import React from 'react'
 import { InputBox } from "../Components/InputBox"
 import { Button, Center, Flex, Heading, Input, Text } from '@chakra-ui/react'
+import doit from "../assets/Logo/doitLogo.svg"
 
 export const SignInPage = () => {
     return (
@@ -52,11 +53,15 @@ export const SignInPage = () => {
                             >Sign Up</Button>
                         </Flex>
                     </Flex>
-                    {/* Inputs */}
-
-                    {/* sign in button and the sign up alternative link */}
+                    
                 </Flex>
             </Flex>
+
+
+            {/* the doit logo*/}
+           <div className=' absolute right-10 bottom-8'>
+            <img src={doit} alt="" />
+           </div>
         </Center>
     )
 }
