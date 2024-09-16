@@ -36,13 +36,13 @@ export const SignUpPage = () => {
           <Flex direction="column">
 
             {/* NAME */}
-            <InputBox placeholder="Enter Your Name" name="Name" type="text" />
+            <InputBox  name="Name" type="text" />
 
             {/* DATE OF BIRTH */}
-            <InputBox placeholder="Date of Birth" name="Date of Birth" type="Date" />
+            <InputBox  name="Date of Birth" type="Date" />
 
             {/* EMAIL */}
-            <InputBox placeholder="Enter your Email" name="Email" type="email" />
+            <InputBox  name="Email" type="email" />
 
           </Flex>
 
@@ -52,11 +52,11 @@ export const SignUpPage = () => {
           {/* right input boxes */}
           <Flex direction="column">
             {/* USERNAME */}
-            <InputBox placeholder="Enter Username" name="Username" type="text" />
+            <InputBox  name="Username" type="text" />
             {/* PASSWORD */}
-            <InputBox placeholder="Enter Password" name="Password" type="password" />
+            <InputBox  name="Password" type="password" />
             {/* CONFIRM PASSWORD */}
-            <InputBox placeholder="ReEnter your Password" name="Confirm Password" type="password" />
+            <InputBox  name="Confirm Password" type="password" />
           </Flex>
 
 
