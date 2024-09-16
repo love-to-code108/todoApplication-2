@@ -21,6 +21,7 @@
 
 
 
+
 // ******************************************************************************
 // LANDING PAGE 
 .LandingPageMainWrapper {
@@ -87,3 +88,55 @@
 
     box-shadow: 4px 4px black;
 }
+
+
+
+
+// SIGN UP PAGE
+
+.SignUpPage-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 4rem 5rem;
+
+
+}
+
+
+// sign up block
+.SignUpPage-main > div {
+    
+    width: 65rem;
+    height: 37rem;
+
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+
+    border-radius: 5px;
+
+    padding: 4.5rem 6rem;
+
+    
+}
+
+// name element input
+.SignUpPage-input{
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+    border-radius: 4px;
+    
+    padding: 2px 4px;
+    width: 20.4rem;
+}
+
+.SignUpPage-input:focus{
+    outline: none;
+
+}
+
