@@ -1,6 +1,4 @@
-import { Box, Flex, Input , Text } from '@chakra-ui/react'
-import React from 'react'
-import { useState } from 'react'
+import { Flex, Input , Text } from '@chakra-ui/react'
 import { useRecoilState } from 'recoil'
 
 
