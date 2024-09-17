@@ -2,6 +2,12 @@ import { Box, Button, Center, Flex, Heading, Input, Text } from "@chakra-ui/reac
 import '@fontsource/poppins';
 import { InputBox } from "../Components/InputBox"
 import doit from "../assets/Logo/doitLogo.svg"
+import { Link } from "react-router-dom";
+
+
+
+
+
 
 
 
@@ -75,7 +81,7 @@ export const SignUpPage = () => {
 
           {/* Already have an account then Sign in  */}
           <Flex ml={8}>
-            <Text>already have an account <span className=" text-[#0D14C2] underline ml-1 hover:cursor-pointer">Sign In</span></Text>
+            <Text>already have an account <Link className=" text-[#0D14C2] underline ml-1 hover:cursor-pointer" to='/signin'>Sign In</Link></Text>
           </Flex>
 
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { InputBox } from "../Components/InputBox"
 import { Button, Center, Flex, Heading, Input, Text } from '@chakra-ui/react'
 import doit from "../assets/Logo/doitLogo.svg"
+import { Link } from 'react-router-dom'
 
 export const SignInPage = () => {
     return (
@@ -26,7 +27,7 @@ export const SignInPage = () => {
                         <Heading mb="4" fontWeight="normal" size="2xl">Sign In</Heading>
 
                         {/* dont have an account sign up line */}
-                        <Text>dont have an account <span className=" text-[#0D14C2] underline ml-1 hover:cursor-pointer">Sign Up</span></Text>
+                        <Text>dont have an account <Link to='/signup' className=" text-[#0D14C2] underline ml-1 hover:cursor-pointer">Sign Up</Link></Text>
                     </Flex>
 
                     <Flex direction="column">
