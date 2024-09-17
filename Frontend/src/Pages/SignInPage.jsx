@@ -1,8 +1,8 @@
-import React from 'react'
 import { InputBox } from "../Components/InputBox"
-import { Button, Center, Flex, Heading, Input, Text } from '@chakra-ui/react'
+import { Button, Center, Flex, Heading, Text } from '@chakra-ui/react'
 import doit from "../assets/Logo/doitLogo.svg"
 import { Link } from 'react-router-dom'
+import { password_atom, userName_atom } from "../Atoms/atoms"
 
 export const SignInPage = () => {
     return (
@@ -33,9 +33,9 @@ export const SignInPage = () => {
                     <Flex direction="column">
 
                         {/* username */}
-                        <InputBox name="Username" type="text" />
+                        <InputBox atom={userName_atom} name="Username" type="text" />
                         {/* password */}
-                        <InputBox name="Password" type="password" />
+                        <InputBox atom={password_atom} name="Password" type="password" />
                         {/* sign in button */}
                         <Flex justify="end">
                             <Button color="white"

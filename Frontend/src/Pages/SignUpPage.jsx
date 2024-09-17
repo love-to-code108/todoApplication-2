@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Heading, Input, Text } from "@chakra-ui/react"
+import { Button, Center, Flex, Heading, Text } from "@chakra-ui/react"
 import '@fontsource/poppins';
 import { InputBox } from "../Components/InputBox"
 import doit from "../assets/Logo/doitLogo.svg"
