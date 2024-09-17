@@ -3,6 +3,7 @@ import '@fontsource/poppins';
 import { InputBox } from "../Components/InputBox"
 import doit from "../assets/Logo/doitLogo.svg"
 import { Link } from "react-router-dom";
+import { birthDate_atom, confirmPassword_atom, email_atom , name_atom, password_atom, userName_atom } from "../Atoms/atoms";
 
 
 
@@ -44,13 +45,13 @@ export const SignUpPage = () => {
           <Flex direction="column">
 
             {/* NAME */}
-            <InputBox name="Name" type="text" />
+            <InputBox atom={name_atom} name="Name" type="text" />
 
             {/* DATE OF BIRTH */}
-            <InputBox name="Date of Birth" type="Date" />
+            <InputBox atom={birthDate_atom} name="Date of Birth" type="Date" />
 
             {/* EMAIL */}
-            <InputBox name="Email" type="email" />
+            <InputBox atom={email_atom} name="Email" type="email" />
 
           </Flex>
 
@@ -60,11 +61,11 @@ export const SignUpPage = () => {
           {/* right input boxes */}
           <Flex direction="column">
             {/* USERNAME */}
-            <InputBox name="Username" type="text" />
+            <InputBox atom={userName_atom} name="Username" type="text" />
             {/* PASSWORD */}
-            <InputBox name="Password" type="password" />
+            <InputBox atom={password_atom} name="Password" type="password" />
             {/* CONFIRM PASSWORD */}
-            <InputBox name="Confirm Password" type="password" />
+            <InputBox atom={confirmPassword_atom} name="Confirm Password" type="password" />
           </Flex>
 
 
