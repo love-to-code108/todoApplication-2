@@ -42,23 +42,38 @@ export const SignUpPage = () => {
     */
 
 
+
+   // NONE OF THE INPUTS ARE NULL
+   if((!userNameInput) || (!nameInput) || (!birthDateInput) || (!passwordInput) || (!confirmPasswordInput) || (!emailInput)){
+     toast({
+       title: 'Error',
+       description:"You cannot leave any input empty",
+       position: "top-right",
+       status:'error',
+       isClosable:true,
+     })
+   } 
+
+
+
+    // IF THE PASSWORD MATCHES THE CONFIRM PASSWORD
       if(passwordInput !== confirmPasswordInput){
+
         toast({
-          title:"Error !!",
-          description: "Password doesnot matches the confirm password",
-          duration: 4000,
-          isClosable: true,
+          title:'Error',
+          description: "Password doesnot matches confirm password",
           position: 'top-right',
-          containerStyle:{
-            backgroundColor:'red',
-            color:"black",
-            boxShadow:'2px 2px red',
-            border:'2px solid black',
-
-          }
-
+          status: 'error',
+          isClosable: true,
         })
       }
+
+
+
+      // CHECKING USERNAME IN THE DATABASE
+      // if()
+
+
   }
 
 
