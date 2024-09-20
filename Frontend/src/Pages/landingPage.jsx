@@ -1,7 +1,30 @@
 import doItLogo from "../assets/Logo/doitLogo.svg"
-
+import { useNavigate } from "react-router-dom"
 
 export const LandingPage = () => {
+
+
+    // INIT USENAVIGATE
+    const routeNavigation = useNavigate();
+
+
+    // OPEN SIGN UP PAGE
+    const openSignUpPage = () => {
+        routeNavigation("/signup");
+    }
+
+
+
+     // OPEN SIGN IN PAGE
+     const openSignInPage = () => {
+        routeNavigation("/signin");
+    }
+
+
+
+
+
+
     return (
         <div className='LandingPageMainWrapper'>
 
@@ -61,12 +84,12 @@ export const LandingPage = () => {
                 <div className=' flex font-poppins text-3xl'>
 
                     {/* sign up  */}
-                    <div className='signUp-button'>
+                    <div className='signUp-button cursor-pointer' onClick={openSignUpPage}>
                         <h1>Sign Up</h1>
                     </div>
 
                     {/* sign in */}
-                    <div className='signIn-button'>
+                    <div className='signIn-button cursor-pointer' onClick={openSignInPage}>
                         <h1>Sign In</h1>
                     </div>
                 </div>

@@ -45,13 +45,13 @@ export const SignUpPage = () => {
           <Flex direction="column">
 
             {/* NAME */}
-            <InputBox atom={name_atom} name="Name" type="text" />
+            <InputBox page={"signUp"} atom={name_atom} name="Name" type="text" />
 
             {/* DATE OF BIRTH */}
-            <InputBox atom={birthDate_atom} name="Date of Birth" type="Date" />
+            <InputBox page={"signUp"} atom={birthDate_atom} name="Date of Birth" type="Date" />
 
             {/* EMAIL */}
-            <InputBox atom={email_atom} name="Email" type="email" />
+            <InputBox page={"signUp"} atom={email_atom} name="Email" type="email" />
 
           </Flex>
 
@@ -61,11 +61,11 @@ export const SignUpPage = () => {
           {/* right input boxes */}
           <Flex direction="column">
             {/* USERNAME */}
-            <InputBox atom={userName_atom} name="Username" type="text" />
+            <InputBox page={"signUp"} atom={userName_atom} name="Username" type="text" />
             {/* PASSWORD */}
-            <InputBox atom={password_atom} name="Password" type="password" />
+            <InputBox page={"signUp"} atom={password_atom} name="Password" type="password" />
             {/* CONFIRM PASSWORD */}
-            <InputBox atom={confirmPassword_atom} name="Confirm Password" type="password" />
+            <InputBox page={"signUp"} atom={confirmPassword_atom} name="Confirm Password" type="password" />
           </Flex>
 
 
