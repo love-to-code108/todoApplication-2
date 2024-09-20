@@ -32,10 +32,13 @@ export const SignInPage = () => {
 
                     <Flex direction="column">
 
+
+
+
                         {/* username */}
-                        <InputBox atom={userName_atom} name="Username" type="text" />
+                        <InputBox page={"signIn"} atom={userName_atom} name="Username" type="text" />
                         {/* password */}
-                        <InputBox atom={password_atom} name="Password" type="password" />
+                        <InputBox page={"signIn"} atom={password_atom} name="Password" type="password" />
                         {/* sign in button */}
                         <Flex justify="end">
                             <Button color="white"
@@ -54,15 +57,15 @@ export const SignInPage = () => {
                             >Sign Up</Button>
                         </Flex>
                     </Flex>
-                    
+
                 </Flex>
             </Flex>
 
 
             {/* the doit logo*/}
-           <div className=' absolute right-10 bottom-8'>
-            <img src={doit} alt="" />
-           </div>
+            <div className=' absolute right-10 bottom-8'>
+                <img src={doit} alt="" />
+            </div>
         </Center>
     )
 }

@@ -3,7 +3,9 @@ import '@fontsource/poppins';
 import { InputBox } from "../Components/InputBox"
 import doit from "../assets/Logo/doitLogo.svg"
 import { Link } from "react-router-dom";
-import { birthDate_atom, confirmPassword_atom, email_atom , name_atom, password_atom, userName_atom } from "../Atoms/atoms";
+import { birthDate_atom, confirmPassword_atom, email_atom, name_atom, password_atom, userName_atom } from "../Atoms/atoms";
+import { useRecoilValue } from "recoil";
+import { useToast } from "@chakra-ui/react";
 
 
 
@@ -13,6 +15,53 @@ import { birthDate_atom, confirmPassword_atom, email_atom , name_atom, password_
 
 
 export const SignUpPage = () => {
+
+
+  // TAKING THE DATA HERE
+  const birthDateInput = useRecoilValue(birthDate_atom);
+  const emailInput = useRecoilValue(email_atom);
+  const nameInput = useRecoilValue(name_atom);
+  const confirmPasswordInput = useRecoilValue(confirmPassword_atom);
+  const passwordInput = useRecoilValue(password_atom);
+  const userNameInput = useRecoilValue(userName_atom);
+
+
+  // INIT TOAST
+  const toast = useToast();
+
+
+
+
+  // SIGN UP PAGE CHECKING
+  const signUpButtonClicked = () => {
+
+    /*
+    1. IF THE PASSWORD AND THE CONFIRM PASSWORD MATCH
+    2. NONE OF THE INPUTS ARE NULL
+    3. USERNAME DOESNOT EXIST IN THE DATABASE
+    */
+
+
+      if(passwordInput !== confirmPasswordInput){
+        toast({
+          title:"Error !!",
+          description: "Password doesnot matches the confirm password",
+          duration: 4000,
+          isClosable: true,
+          position: 'top-right',
+          containerStyle:{
+            backgroundColor:'red',
+            color:"black",
+            boxShadow:'2px 2px red',
+            border:'2px solid black',
+
+          }
+
+        })
+      }
+  }
+
+
 
   return (
     <Center className=" w-[100vw] h-[100vh] font-poppins">
@@ -88,7 +137,9 @@ export const SignUpPage = () => {
 
           {/* Sign Up Button */}
           <Flex mr={7}>
-            <Button color="white"
+            <Button
+              onClick={signUpButtonClicked}
+              color="white"
               background="black"
               borderRadius="0px"
               px="6"
