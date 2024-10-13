@@ -5,6 +5,8 @@ import { useRecoilState } from 'recoil'
 export const InputBox = (props) => {
 
     const [data , setData] = useRecoilState(props.atom);
+
+    
     
     
 /*
