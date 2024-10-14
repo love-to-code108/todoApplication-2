@@ -9,18 +9,18 @@ export const MainTodoPage = () => {
   // const userData = JSON.parse(storedData);
   // console.log(userData);
 
-  // const [array, setArray] = useState([]);
+  const [array, setArray] = useState([]);
 
 
-  // const printing = async () => {
-  //   const response = await databases.listDocuments(
-  //     '670d28850002211f53b4',
-  //     '670d2893000d94d71bc2',
-  //   )
+  const printing = async () => {
+    const response = await databases.listDocuments(
+      '670d28850002211f53b4',
+      '670d2893000d94d71bc2',
+    )
 
-  //   console.log(response);
-  //   setArray(response.documents);
-  // }
+    console.log(response);
+    setArray(response.documents);
+  }
 
 
 
@@ -29,7 +29,7 @@ export const MainTodoPage = () => {
 
   return (
     <div className=' w-[100vw] h-[100vh] font-poppins'>
-
+      <Button onClick={printing}>Click me</Button>
       
 
     </div>
