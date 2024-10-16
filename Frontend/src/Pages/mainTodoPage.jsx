@@ -168,7 +168,7 @@ export const MainTodoPage = () => {
           <Flex direction='column' w='500px' marginTop='160px' marginBottom='60px'>
 
             {/* WHAT DO YOU NEED TO DO SECTION WITH THE INPUT BOX AND THE ADD BUTTON */}
-            <Text fontSize='3xl'>What do you need to do ?</Text>
+            <Text fontSize='3xl' marginBottom='10px'>What do you need to do ?</Text>
 
             {/* the input section */}
             <ToDoInputInputBox/>
