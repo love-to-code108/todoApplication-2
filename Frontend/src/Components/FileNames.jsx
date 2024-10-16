@@ -1,32 +1,39 @@
 import { Flex, Input, Image } from '@chakra-ui/react'
 import fileSelectedArrowImg from "../assets/icons/right-arrow.png"
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { fileSelectedArrow_atom } from '../Atoms/atoms'
 
 
 export const FileNames = (props) => {
+    const [counter, setCoutner] = useState(0)
 
     const [fileSelectedArrow, setFileSelectedArrow] = useRecoilState(fileSelectedArrow_atom);
 
     const fileSelectedArrowImgState = useRef('');
     const inputSectionRef = useRef('');
-    
-    
-    
+
+
+    console.log('1',counter);
+
+
+
+
     // after click i am setting the setFileSelectedArrow state to equal to the index of the element so that i can trace which element needs to have arrow
     const arrowPosition_Fun = () => {
+        setCoutner(e => {return e = e + 1})
+        console.log(counter)
         setFileSelectedArrow(props.ind);
         fileSelectedArrowImgState.current.style.display = 'flex';
     }
-    
 
 
-    console.log("1");
-    
+
+
+
     useEffect(() => {
-        
-        console.log("Number of render");
+
+
 
         if (fileSelectedArrow === props.ind) {
             fileSelectedArrowImgState.current.style.display = 'flex';
@@ -45,8 +52,8 @@ export const FileNames = (props) => {
 
         
     });
-
-
+    
+    
 
 
 
@@ -76,8 +83,8 @@ export const FileNames = (props) => {
                         _hover: {
                             border: "2px solid black",
                             boxShadow: "2px 2px 0 0 black",
-                            cursor:"pointer",
-                            
+                            cursor: "pointer",
+
 
 
                         },

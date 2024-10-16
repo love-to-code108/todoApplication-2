@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
-import { ToDoInputBox } from '../Components/toDoInputBox'
-import { Button, Flex, Text, Input, Center, Image } from '@chakra-ui/react';
-import { account, databases } from '../lib/appwrite';
+import { useState } from 'react'
+import {  Flex, Text, Input, Center, Image } from '@chakra-ui/react';
 import newFileIcon from '../assets/icons/new-documentWhite.png'
-import fileSelectedArrow from '../assets/icons/right-arrow.png'
 import { FileNames } from '../Components/FileNames';
 
 
