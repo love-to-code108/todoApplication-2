@@ -54,7 +54,7 @@ export const SignInPage = () => {
                                         transform: "scale(1.04)"
                                     }
                                 }}
-                            >Sign Up</Button>
+                            >Sign In</Button>
                         </Flex>
                     </Flex>
 
