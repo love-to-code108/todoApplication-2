@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { ToDoInputBox } from '../Components/toDoInputBox'
-import { Button, Flex , Text } from '@chakra-ui/react';
+import { Button, Flex, Text, Input, Center, Image } from '@chakra-ui/react';
 import { account, databases } from '../lib/appwrite';
+import newFileIcon from '../assets/icons/new-documentWhite.png'
 
 export const MainTodoPage = () => {
 
@@ -37,34 +38,86 @@ export const MainTodoPage = () => {
 
 
       {/* THE TODO APPLICATION PAGE STARTS HERE */}
-      <Flex direction="row">
+      <Flex w='100vw' h='100vh' >
 
 
         {/* ***************************************************** */}
         {/* THE USER AND FILE SECTION */}
         {/* ***************************************************** */}
-        <Flex w='20%' h='100vh'>
+        <Flex h='100vh' padding='31px' paddingRight='34px' borderRight='1px' direction='column'>
 
 
           {/* THE USER NAME EMAIL AND PROFILE PICTURE */}
-          <Flex w='351px' h='122px' justify='center' align='center'>
+          <Flex w='351px' h='122px' justify='space-evenly' align='center' borderWidth='1px' borderColor='black' boxShadow='3px 3px black' borderRadius='4px'>
+
+
             {/* Profile picture */}
-            <div className='bg-[#F56B00] w-[6rem] h-[6rem] rounded-full'>
-                {/* the user profile image will go here */}
+            <div className='bg-[#F56B00] w-[6rem] h-[6rem] rounded-full border-[1px] border-black' >
+              {/* the user profile image will go here */}
             </div>
+
+
 
             {/* User Name and Email */}
             <Flex direction='column'>
-                <Text fontSize='lg'>UserName</Text>
-                <Text fontSize='lg'>Email</Text>
+              <Text fontSize='xl'>love-to-code108</Text>
+              <Text fontSize='xl'>love.to.code108@</Text>
             </Flex>
           </Flex>
 
 
 
 
+
+
           {/* THE SEARCH BAR ADD FILE BUTTON AND THE FILES SECTION */}
-          <Flex>
+          <Flex w='351px' marginTop='80px'>
+
+
+            {/* Search bar and the add file button */}
+            <Flex w='100%' justify='space-evenly' align='center'>
+
+              <Input borderWidth='1px'
+                borderColor='black'
+                w='260px'
+                borderRadius='2px'
+                boxShadow='2px 2px 0 0 black'
+                sx={
+                  {
+                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                    _hover: {
+                      border: "2px solid black",
+                      boxShadow: "2px 2px 0 0 black",
+
+                      
+                    },
+                    _focus: {
+                      border: "2px solid black",
+                      boxShadow: "2px 2px 0 0 black",
+
+                      
+                    }
+                  }
+                }></Input>
+
+
+              <Center borderWidth='1px' borderColor='black' borderRadius='4px'
+                backgroundColor='black'
+
+                paddingX='10px'
+                paddingY='7px'>
+
+                <Image w='25px' src={newFileIcon}></Image>
+              </Center>
+
+            </Flex>
+
+
+
+            {/* looping through an array of files */}
+            <Flex>
+
+            </Flex>
 
           </Flex>
 
@@ -77,10 +130,14 @@ export const MainTodoPage = () => {
 
 
 
+
+
+
+
         {/* ***************************************************** */}
         {/* THE TODO SECTION */}
         {/* ***************************************************** */}
-        <Flex w='80%' h='100vh'>
+        <Flex h='100vh'>
 
 
 
