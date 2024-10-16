@@ -43,39 +43,47 @@ export const MainTodoPage = () => {
         <Flex h='100vh' padding='31px' paddingRight='34px' borderRight='1px' direction='column'>
 
 
+
+
+          {/* ///////////////////////////////////////////// */}
           {/* THE USER NAME EMAIL AND PROFILE PICTURE */}
           <Flex w='351px' h='122px' justify='space-evenly' align='center' borderWidth='1px' borderColor='black' boxShadow='3px 3px black' borderRadius='4px'>
 
-
+            {/* ///////////////////////////////////////////// */}
             {/* Profile picture */}
             <div className='bg-[#F56B00] w-[6rem] h-[6rem] rounded-full border-[1px] border-black' >
               {/* the user profile image will go here */}
             </div>
 
 
-
+            {/* ///////////////////////////////////////////// */}
             {/* User Name and Email */}
             <Flex direction='column'>
               <Text fontSize='xl'>love-to-code108</Text>
               <Text fontSize='xl'>love.to.code108@</Text>
             </Flex>
+
+
           </Flex>
 
 
 
 
 
-
+          {/* ************************************************** */}
           {/* THE SEARCH BAR ADD FILE BUTTON AND THE FILES SECTION */}
+          {/* *************************************************** */}
           <Flex w='351px' marginTop='80px' direction='column'>
 
 
+
+            {/* ///////////////////////////////////////////// */}
             {/* Search bar and the add file button */}
             <Flex w='100%' justify='space-evenly' align='center' marginBottom='30px'>
 
-              <Input 
-              placeholder='Search'
-              borderWidth='1px'
+              <Input
+                placeholder='Search'
+                borderWidth='1px'
                 borderColor='black'
                 w='260px'
                 borderRadius='2px'
@@ -98,7 +106,8 @@ export const MainTodoPage = () => {
                   }
                 }></Input>
 
-
+              {/* ///////////////////////////////////////////// */}
+              {/* the add new file icon after file search section */}
               <Center borderWidth='1px' borderColor='black' borderRadius='4px'
                 backgroundColor='black'
 
@@ -112,6 +121,7 @@ export const MainTodoPage = () => {
 
 
 
+            {/* ///////////////////////////////////////////// */}
             {/* looping through an array of files */}
             <Flex backgroundColor='' w='351px'
               direction='column' align='end' justify='space-evenly'>
@@ -160,7 +170,7 @@ export const MainTodoPage = () => {
             top='30px'
             right='60px'
             src={doitLogo} alt="" />
-            
+
 
 
           {/* ///////////////////////////////////// */}
@@ -171,33 +181,43 @@ export const MainTodoPage = () => {
             <Text fontSize='3xl' marginBottom='10px'>What do you need to do ?</Text>
 
             {/* the input section */}
-            <ToDoInputInputBox/>
+            <ToDoInputInputBox />
           </Flex>
 
 
 
           {/* //////////////////////////////////////// */}
           {/* The todos heading with all the todos */}
-          <Flex direction='column' w='500px'>
+          <Flex direction='column' marginBottom='100px' w='500px'>
 
 
             {/* THE TODOS HEADING */}
-            <Text fontSize='3xl'>Todos:</Text>
+            <Text fontSize='3xl' marginBottom='10px'>Todos :</Text>
 
 
             {/* THE TODOS SECTION WITH ALL TODOS */}
             <IndivisualTodo />
 
 
+
+          </Flex>
+
+
+
+          {/* //////////////////////////////////////////////// */}
+          {/* the completed heading and the completed section */}
+          <Flex direction='column' w='500px'>
+            {/* THE COMPLETED HEADING */}
+            <Text fontSize='3xl' marginBottom='10px'>Completed :</Text>
+
+            {/* THE COMPLETED SECTION */}
+            <IndivisualTodo />
+
           </Flex>
 
 
 
 
-          {/* THE COMPLETED HEADING */}
-
-
-          {/* THE COMPLETED SECTION */}
         </Flex>
 
       </Flex>
