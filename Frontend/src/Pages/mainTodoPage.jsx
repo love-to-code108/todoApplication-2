@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import {  Flex, Text, Input, Center, Image } from '@chakra-ui/react';
+import { Flex, Text, Input, Center, Image, Heading } from '@chakra-ui/react';
 import newFileIcon from '../assets/icons/new-documentWhite.png'
 import { FileNames } from '../Components/FileNames';
+import doitLogo from "../assets/Logo/doitLogo.svg"
+import { ToDoInputBox } from '../Components/toDoInputBox';
 
 
 
@@ -11,7 +13,7 @@ export const MainTodoPage = () => {
   // const userData = JSON.parse(storedData);
   // console.log(userData);
 
-  const [array, setArray] = useState(["File 1", "File 2", "File 3","File 4"]);
+  const [array, setArray] = useState(["File 1", "File 2", "File 3", "File 4"]);
 
 
 
@@ -143,27 +145,41 @@ export const MainTodoPage = () => {
         {/* ***************************************************** */}
         {/* THE TODO SECTION */}
         {/* ***************************************************** */}
-        <Flex h='100vh'>
+        <Flex h='100vh' direction='column' w='100%'>
 
 
 
 
           {/* THE DOIT LOGO  */}
-
-
-          {/* WHAT DO YOU NEED TO DO SECTION WITH THE INPUT BOX AND THE ADD BUTTON */}
-
-
-
-
-          {/* THE TODOS HEADING */}
+          <Image
+            h='50px'
+            position='relative' src={doitLogo} alt="" />
 
 
 
-          {/* THE TODOS SECTION WITH ALL TODOS */}
+          <Flex direction='column'>
+            {/* WHAT DO YOU NEED TO DO SECTION WITH THE INPUT BOX AND THE ADD BUTTON */}
+            <Text fontSize='4xl'>What do you need to do ?</Text>
+
+            {/* the input section */}
+            <ToDoInputBox></ToDoInputBox>
+          </Flex>
 
 
 
+          {/* The todos heading with all the todos */}
+          <Flex>
+
+
+            {/* THE TODOS HEADING */}
+              <Text>Todos:</Text>
+
+
+            {/* THE TODOS SECTION WITH ALL TODOS */}
+            
+
+
+          </Flex>
 
           {/* THE COMPLETED HEADING */}
 
