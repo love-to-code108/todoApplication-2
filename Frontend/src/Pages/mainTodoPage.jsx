@@ -3,6 +3,10 @@ import { ToDoInputBox } from '../Components/toDoInputBox'
 import { Button, Flex, Text, Input, Center, Image } from '@chakra-ui/react';
 import { account, databases } from '../lib/appwrite';
 import newFileIcon from '../assets/icons/new-documentWhite.png'
+import fileSelectedArrow from '../assets/icons/right-arrow.png'
+import { FileNames } from '../Components/FileNames';
+
+
 
 export const MainTodoPage = () => {
 
@@ -10,18 +14,10 @@ export const MainTodoPage = () => {
   // const userData = JSON.parse(storedData);
   // console.log(userData);
 
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState(["File 1", "File 2", "File 3","File 4"]);
 
 
-  const printing = async () => {
-    const response = await databases.listDocuments(
-      '670d28850002211f53b4',
-      '670d2893000d94d71bc2',
-    )
 
-    console.log(response);
-    setArray(response.documents);
-  }
 
 
 
@@ -71,11 +67,11 @@ export const MainTodoPage = () => {
 
 
           {/* THE SEARCH BAR ADD FILE BUTTON AND THE FILES SECTION */}
-          <Flex w='351px' marginTop='80px'>
+          <Flex w='351px' marginTop='80px' direction='column'>
 
 
             {/* Search bar and the add file button */}
-            <Flex w='100%' justify='space-evenly' align='center'>
+            <Flex w='100%' justify='space-evenly' align='center' marginBottom='30px'>
 
               <Input borderWidth='1px'
                 borderColor='black'
@@ -89,13 +85,13 @@ export const MainTodoPage = () => {
                       border: "2px solid black",
                       boxShadow: "2px 2px 0 0 black",
 
-                      
+
                     },
                     _focus: {
                       border: "2px solid black",
                       boxShadow: "2px 2px 0 0 black",
 
-                      
+
                     }
                   }
                 }></Input>
@@ -115,12 +111,25 @@ export const MainTodoPage = () => {
 
 
             {/* looping through an array of files */}
-            <Flex>
+            <Flex backgroundColor='' w='351px'
+              direction='column' align='end' justify='space-evenly'>
+
+              {/* looping throught elements in an array */}
+              {array.map((value, index) => (
+                <FileNames key={value} ind={index} val={value} />
+
+              ))}
 
             </Flex>
 
-          </Flex>
 
+
+
+            {/* -------------------------------------------- */}
+            {/* THE SEARCH BAR ADD FILE BUTTON AND THE FILES SECTION */}
+          </Flex>
+          {/* --------------------------------- */}
+          {/* THE USER AND FILE SECTION */}
         </Flex>
 
 

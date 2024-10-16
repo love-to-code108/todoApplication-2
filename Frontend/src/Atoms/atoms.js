@@ -41,3 +41,9 @@ export const email_atom = atom({
     key:'email',
     default:'',
 })
+
+// FILE SELECTED ARROW
+export const fileSelectedArrow_atom = atom({
+    key:'fileSelected-arrow',
+    default:'',
+})

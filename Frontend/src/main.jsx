@@ -9,13 +9,12 @@ import theme from "./ChakraUi/theme.js"
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  
     <RecoilRoot>
       <BrowserRouter>
         <ChakraProvider theme={theme}>
           <App />
         </ChakraProvider>
       </BrowserRouter>
-    </RecoilRoot>
-  </StrictMode>,
+    </RecoilRoot>,
 )
