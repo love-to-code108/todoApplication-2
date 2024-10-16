@@ -3,7 +3,8 @@ import { Flex, Text, Input, Center, Image, Heading } from '@chakra-ui/react';
 import newFileIcon from '../assets/icons/new-documentWhite.png'
 import { FileNames } from '../Components/FileNames';
 import doitLogo from "../assets/Logo/doitLogo.svg"
-import { ToDoInputBox } from '../Components/toDoInputBox';
+import { ToDoInputInputBox } from '../Components/toDoInputBox';
+import { IndivisualTodo } from '../Components/indivisualTodo';
 
 
 
@@ -72,7 +73,9 @@ export const MainTodoPage = () => {
             {/* Search bar and the add file button */}
             <Flex w='100%' justify='space-evenly' align='center' marginBottom='30px'>
 
-              <Input borderWidth='1px'
+              <Input 
+              placeholder='Search'
+              borderWidth='1px'
                 borderColor='black'
                 w='260px'
                 borderRadius='2px'
@@ -145,41 +148,51 @@ export const MainTodoPage = () => {
         {/* ***************************************************** */}
         {/* THE TODO SECTION */}
         {/* ***************************************************** */}
-        <Flex h='100vh' direction='column' w='100%'>
+        <Flex h='100vh' direction='column' w='100%' justify='start' align='center'>
 
 
 
-
+          {/* ////////////////////////// */}
           {/* THE DOIT LOGO  */}
           <Image
             h='50px'
-            position='relative' src={doitLogo} alt="" />
-
-
-
-          <Flex direction='column'>
-            {/* WHAT DO YOU NEED TO DO SECTION WITH THE INPUT BOX AND THE ADD BUTTON */}
-            <Text fontSize='4xl'>What do you need to do ?</Text>
-
-            {/* the input section */}
-            <ToDoInputBox></ToDoInputBox>
-          </Flex>
-
-
-
-          {/* The todos heading with all the todos */}
-          <Flex>
-
-
-            {/* THE TODOS HEADING */}
-              <Text>Todos:</Text>
-
-
-            {/* THE TODOS SECTION WITH ALL TODOS */}
+            position='absolute'
+            top='30px'
+            right='60px'
+            src={doitLogo} alt="" />
             
 
 
+          {/* ///////////////////////////////////// */}
+          {/* what do yo need to do and the input box */}
+          <Flex direction='column' w='500px' marginTop='160px' marginBottom='60px'>
+
+            {/* WHAT DO YOU NEED TO DO SECTION WITH THE INPUT BOX AND THE ADD BUTTON */}
+            <Text fontSize='3xl'>What do you need to do ?</Text>
+
+            {/* the input section */}
+            <ToDoInputInputBox/>
           </Flex>
+
+
+
+          {/* //////////////////////////////////////// */}
+          {/* The todos heading with all the todos */}
+          <Flex direction='column' w='500px'>
+
+
+            {/* THE TODOS HEADING */}
+            <Text fontSize='3xl'>Todos:</Text>
+
+
+            {/* THE TODOS SECTION WITH ALL TODOS */}
+            <IndivisualTodo />
+
+
+          </Flex>
+
+
+
 
           {/* THE COMPLETED HEADING */}
 
